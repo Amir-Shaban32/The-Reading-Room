@@ -1,8 +1,6 @@
 # The Reading Room
 
-My personal bookshelf: the books I've read and the ones I'm reading now, shown on an interactive 3D shelf.
-
-Built with React, Vite, Three.js and Tailwind CSS.
+A little corner of my learning journey. These are the books that have challenged my thinking, helped me explore new ideas, and shaped the way I approach building things.
 
 ## Run
 
