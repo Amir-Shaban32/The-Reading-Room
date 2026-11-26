@@ -1,0 +1,135 @@
+import type { NewsletterBookshelfItem } from '@/components/ui/newsletter-bookshelf'
+
+export type ReadingStatus = 'Currently reading' | 'Read'
+
+export type LibraryBook = Omit<NewsletterBookshelfItem, 'date' | 'subtitle'> & {
+  author: string
+  status: ReadingStatus
+  pages: number
+  edition: string
+  year: number
+  isbn: string
+  coverRatio: number
+  finishedDate?: string
+  note?: string
+}
+
+export const books: LibraryBook[] = [
+  {
+    id: 'python-crash-course-3e',
+    title: 'Python Crash Course',
+    author: 'Eric Matthes',
+    color: '#ffe77b',
+    foil: '#17140c',
+    coverImage: '/books/python-crash-course-front.png',
+    spineImage: '/books/python-crash-course-side.png',
+    coverRatio: 504 / 666,
+    status: 'Read',
+    pages: 560,
+    edition: 'Third edition',
+    year: 2023,
+    isbn: '9781718502703',
+  },
+  {
+    id: 'operating-systems-three-easy-pieces',
+    title: 'Operating Systems: Three Easy Pieces',
+    author: 'Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau',
+    color: '#171717',
+    foil: '#f0f0f0',
+    coverImage: '/books/ostep-front.png',
+    spineImage: '/books/ostep-side.png',
+    coverRatio: 896 / 1200,
+    status: 'Currently reading',
+    pages: 747,
+    edition: 'First edition',
+    year: 2018,
+    isbn: '9781985086590',
+  },
+  {
+    id: 'dive-into-design-patterns',
+    title: 'Dive into Design Patterns',
+    author: 'Alexander Shvets',
+    color: '#080d1d',
+    foil: '#f0f0f0',
+    coverImage: '/books/design-patterns-front.png',
+    coverRatio: 250 / 375,
+    status: 'Currently reading',
+    pages: 358,
+    edition: 'First edition',
+    year: 2023,
+    isbn: '9798319184160',
+  },
+  {
+    id: 'computer-networking-top-down-approach-8e',
+    title: 'Computer Networking: A Top-Down Approach',
+    author: 'James F. Kurose and Keith W. Ross',
+    color: '#718795',
+    foil: '#1e2d36',
+    coverImage: '/books/networking-top-down-approach-front.png',
+    coverRatio: 796 / 1000,
+    status: 'Currently reading',
+    pages: 800,
+    edition: 'Eighth edition',
+    year: 2021,
+    isbn: '1292405465',
+  },
+  {
+    id: 'think-like-a-programmer',
+    title: 'Think Like a Programmer',
+    author: 'V. Anton Spraul',
+    color: '#dbce3c',
+    foil: '#171717',
+    coverImage: '/books/think_like_programmer-front.png',
+    spineImage: '/books/think_like_programmer-side.png',
+    coverRatio: 378 / 500,
+    status: 'Read',
+    pages: 260,
+    edition: 'First edition',
+    year: 2012,
+    isbn: '1593274246',
+  },
+  {
+    id: 'eloquent-javascript-4e',
+    title: 'Eloquent JavaScript',
+    author: 'Marijn Haverbeke',
+    color: '#f5d521',
+    foil: '#171717',
+    coverImage: '/books/eloquent-js-front.png',
+    spineImage: '/books/eloquent-js-side.png',
+    coverRatio: 322 / 425,
+    status: 'Read',
+    pages: 435,
+    edition: 'Fourth edition',
+    year: 2024,
+    isbn: '1718504101',
+  },
+  {
+    id: 'how-linux-works-2e',
+    title: 'How Linux Works',
+    author: 'Brian Ward',
+    color: '#f5df78',
+    foil: '#171717',
+    coverImage: '/books/how-linux-works-front.png',
+    coverRatio: 387 / 516,
+    status: 'Read',
+    pages: 338,
+    edition: 'Second edition',
+    year: 2014,
+    isbn: '1593275676',
+  },
+  {
+    id: 'grokking-algorithms',
+    title: 'Grokking Algorithms',
+    author: 'Aditya Bhargava',
+    color: '#fffffe',
+    foil: '#171717',
+    coverImage: '/books/grokking-algos-front.png',
+    spineImage: '/books/grokking-algos-side.png',
+    coverRatio: 954 / 1200,
+    status: 'Read',
+    pages: 258,
+    edition: 'First edition',
+    year: 2016,
+    isbn: '1617292230',
+  },
+]
